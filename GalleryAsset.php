@@ -21,6 +21,7 @@ class GalleryAsset extends AssetBundle
     public $sourcePath = '@vendor/2amigos/yii2-gallery-widget/assets/';
 
     public $css = [
+
         'vendor/css/blueimp-gallery.min.css',
     ];
 

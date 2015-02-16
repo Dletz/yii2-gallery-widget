@@ -1062,21 +1062,20 @@
                     );
                     console.log(index);
                     if (metaElement !== undefined){
-                    this.slides[index].appendChild(metaElement);
+                        this.slides[index].appendChild(metaElement);
                         var metaContainer = this.slides[index].lastChild;
                         var imgContainer = this.slides[index].firstChild;
                         if (index == 0 && k == 1){
-                            oldHeight = this.container[0].offsetHeight;
-                        var newHeight = this.container[0].offsetHeight + metaContainer.offsetHeight,
-                            buttonTop = 100 / (this.container[0].offsetHeight +  metaContainer.offsetHeight),
-                            containerPadding= 56.25 / this.container[0].offsetHeight;
+                            var newHeight = this.container[0].offsetHeight + metaContainer.offsetHeight,
+                                buttonTop = 100 / (this.container[0].offsetHeight +  metaContainer.offsetHeight),
+                                containerPadding= 56.25 / this.container[0].offsetHeight;
                             containerPadding = containerPadding * newHeight ;
-                        this.container[0].style.paddingBottom = containerPadding + '%';
-                            var contentHalfHeight = (this.container[0].offsetHeight / 2) + (metaContainer.offsetHeight /2),
-                            buttonTop = buttonTop * contentHalfHeight;
+                            this.container[0].style.paddingBottom = containerPadding + '%';
+                            var contentHalfHeight = (this.container[0].offsetHeight / 2) + (metaContainer.offsetHeight /2);
+                                buttonTop = buttonTop * contentHalfHeight;
                             console.log(contentHalfHeight, this.container[0].offsetHeight / 2 );
-                        var nextButton = this.container[0].querySelector('.next');
-                        var prevButton = this.container[0].querySelector('.prev');
+                            var nextButton = this.container[0].querySelector('.next');
+                            var prevButton = this.container[0].querySelector('.prev');
                             nextButton.style.top =buttonTop +'%';
                             prevButton.style.top =buttonTop +'%';
                         }
@@ -1086,14 +1085,14 @@
                             imgChildIndex = imgChild.length;
                         for (l = 0; l < imgChildIndex; l += 1)
                         {
-                        if(imgChild[l].tagName == 'A')
-                        {
-                            imgChild[l].style.top =buttonTop +'%';
-                        }
-                        else
-                        {
-                            imgChild[l].style.paddingTop = metaContainer.offsetHeight+'px';
-                        }
+                            if(imgChild[l].tagName == 'A')
+                            {
+                                imgChild[l].style.top =buttonTop +'%';
+                            }
+                            else
+                            {
+                                imgChild[l].style.paddingTop = metaContainer.offsetHeight+'px';
+                            }
                     }
                     }
                 }
@@ -1303,7 +1302,7 @@
                         if (metaContainer && imgContainer)
                         {
                         var newHeight = container[i].offsetHeight + metaContainer.offsetHeight,
-                            containerPadding= 56.25 / container[i].offsetHeight;
+                            containerPadding= 49.25 / container[i].offsetHeight;
                         containerPadding = containerPadding * newHeight  ;
                         container[i].style.paddingBottom = containerPadding + '%';
                         var buttonTop = 100 / ( container[i].offsetHeight ),

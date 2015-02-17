@@ -1064,7 +1064,6 @@
                         var metaContainer = this.slides[index].lastChild;
                         var imgContainer = this.slides[index].firstChild;
                         if (index == 0 && k == 1) {
-                            oldHeight = this.container[0].offsetHeight;
                             var newHeight = this.container[0].offsetHeight + metaContainer.offsetHeight,
                                 containerPadding = 46.25 / this.container[0].offsetHeight;
                             containerPadding = containerPadding * newHeight;
